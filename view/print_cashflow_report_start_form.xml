@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form>
+    <group id="dates" colspan="4" col="4">
+        <label name="from_date"/>
+        <field name="from_date"/>
+        <label name="to_date"/>
+        <field name="to_date"/>
+    </group>
+    <label name="company"/>
+    <field name="company" widget="selection"/>
+    <label name="analytic_account"/>
+    <field name="analytic_account" widget="selection"/>
+</form>

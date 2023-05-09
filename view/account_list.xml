@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/tree/field[@name='debit_type']" position="after">
+        <field name="cashflow_report"/>
+    </xpath>
+</data>

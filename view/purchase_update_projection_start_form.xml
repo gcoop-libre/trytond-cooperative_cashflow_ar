@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form>
+    <label name="from_date"/>
+    <field name="from_date"/>
+    <label name="formula"/>
+    <field name="formula"/>
+</form>
