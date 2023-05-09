@@ -1,0 +1,507 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.account,cashflow_report:"
+msgid "Use in cashflow report"
+msgstr "Utilizar en informe de cashflow"
+
+msgctxt "field:cooperative.lote.update_projection.start,formula:"
+msgid "Unit Price Formula"
+msgstr "Fórmula de Precio"
+
+msgctxt "field:cooperative.lote.update_projection.start,from_date:"
+msgid "From Date"
+msgstr "Desde la fecha"
+
+msgctxt "field:cooperative_ar.print_cashflow.start,analytic_account:"
+msgid "Analytic Account"
+msgstr "Cuenta analítica"
+
+msgctxt "field:cooperative_ar.print_cashflow.start,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:cooperative_ar.print_cashflow.start,from_date:"
+msgid "From Date"
+msgstr "Desde la fecha"
+
+msgctxt "field:cooperative_ar.print_cashflow.start,to_date:"
+msgid "To Date"
+msgstr "Hasta la fecha"
+
+msgctxt "field:purchase.update_projection.start,formula:"
+msgid "Unit Price Formula"
+msgstr "Fórmula de Precio"
+
+msgctxt "field:purchase.update_projection.start,from_date:"
+msgid "From Date"
+msgstr "Desde la fecha"
+
+msgctxt "field:sale.update_projection.start,formula:"
+msgid "Unit Price Formula"
+msgstr "Fórmula de Precio"
+
+msgctxt "field:sale.update_projection.start,from_date:"
+msgid "From Date"
+msgstr "Desde la fecha"
+
+msgctxt "help:cooperative.lote.update_projection.start,formula:"
+msgid ""
+"Python expression that will be evaluated with:\n"
+"- amount: the current amount of each receipt"
+msgstr ""
+"Expresión de Python que se evaluará como:\n"
+"- amount: El importe actual de cada recibo"
+
+msgctxt "help:cooperative.lote.update_projection.start,from_date:"
+msgid "Date from which the amounts will be updated"
+msgstr "Fecha a partir de la cual se actualizarán los importes"
+
+msgctxt "help:purchase.update_projection.start,formula:"
+msgid ""
+"Python expression that will be evaluated with:\n"
+"- unit_price: the current unit price of each line"
+msgstr ""
+"Expresión de Python que se evaluará como:\n"
+"- unit_price: El precio unitario actual de cada línea"
+
+msgctxt "help:purchase.update_projection.start,from_date:"
+msgid "Delivery Date from which the prices will be updated"
+msgstr "Fecha de entrega a partir de la cual se actualizarán los precios"
+
+msgctxt "help:sale.update_projection.start,formula:"
+msgid ""
+"Python expression that will be evaluated with:\n"
+"- unit_price: the current unit price of each line"
+msgstr ""
+"Expresión de Python que se evaluará como:\n"
+"- unit_price: El precio unitario actual de cada línea"
+
+msgctxt "help:sale.update_projection.start,from_date:"
+msgid "Delivery Date from which the prices will be updated"
+msgstr "Fecha de entrega a partir de la cual se actualizarán los precios"
+
+msgctxt "model:cooperative.lote.update_projection.start,name:"
+msgid "Update Recibo Projection"
+msgstr "Actualizar proyección de Recibo"
+
+msgctxt "model:cooperative_ar.print_cashflow.start,name:"
+msgid "Print Cash-Flow"
+msgstr "Imprimir Cash-Flow"
+
+msgctxt "model:ir.action,name:report_cashflow"
+msgid "Cash-Flow"
+msgstr "Cash-Flow"
+
+msgctxt "model:ir.action,name:wiz_lote_update_projection"
+msgid "Update Recibo Projection"
+msgstr "Actualizar proyección de Recibo"
+
+msgctxt "model:ir.action,name:wiz_print_cashflow_report"
+msgid "Print Cash-Flow"
+msgstr "Imprimir Cash-Flow"
+
+msgctxt "model:ir.action,name:wiz_purchase_update_projection"
+msgid "Update Purchase Projection"
+msgstr "Actualizar proyección de Compra"
+
+msgctxt "model:ir.action,name:wiz_sale_update_projection"
+msgid "Update Sale Projection"
+msgstr "Actualizar proyección de Venta"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_purchase_form_domain_projected"
+msgid "Projected"
+msgstr "Proyectada"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_recibo_form_domain_projected"
+msgid "Projected"
+msgstr "Proyectado"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_recibo_lote_form_domain_projected"
+msgid "Projected"
+msgstr "Proyectado"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_sale_form_domain_projected"
+msgid "Projected"
+msgstr "Proyectada"
+
+msgctxt "model:ir.model.button,string:purchase_project_button"
+msgid "Project"
+msgstr "Proyectar"
+
+msgctxt "model:ir.model.button,string:recibo_lote_project_button"
+msgid "Project"
+msgstr "Proyectar"
+
+msgctxt "model:ir.model.button,string:recibo_project_button"
+msgid "Project"
+msgstr "Proyectar"
+
+msgctxt "model:ir.model.button,string:sale_project_button"
+msgid "Project"
+msgstr "Proyectar"
+
+msgctxt "model:ir.ui.menu,name:menu_print_cashflow_report"
+msgid "Print Cash-Flow"
+msgstr "Imprimir Cash-Flow"
+
+msgctxt "model:purchase.update_projection.start,name:"
+msgid "Update Purchase Projection"
+msgstr "Actualizar proyección de Compra"
+
+msgctxt "model:sale.update_projection.start,name:"
+msgid "Update Sale Projection"
+msgstr "Actualizar proyección de Venta"
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "("
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid ")"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid ","
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "/"
+msgstr "/"
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "/for"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "00/00/0000"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "00:00:00"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "???"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "Año"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "Categoría"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "Mes"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "Monto"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "Página"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "Socio"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[0]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[10]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[11]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[12]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[13]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[14]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[15]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[16]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[17]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[18]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[19]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[1]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[20]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[21]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[22]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[23]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[2]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[3]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[4]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[5]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[6]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[7]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[8]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "columns[9]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "for each=\"record in expenses_raw\""
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "for each=\"record in expenses_summary\""
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "for each=\"record in receipts_raw\""
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "for each=\"record in receipts_summary\""
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "for each=\"record in sales_raw\""
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "for each=\"record in sales_summary\""
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "for each=\"record in synthesis\""
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.amount"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.category"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[0]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[10]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[11]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[12]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[13]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[14]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[15]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[16]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[17]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[18]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[19]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[1]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[20]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[21]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[22]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[23]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[2]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[3]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[4]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[5]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[6]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[7]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[8]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.columns[9]"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.month"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.name"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.partner"
+msgstr ""
+
+msgctxt "report:cooperative_ar.cashflow:"
+msgid "record.year"
+msgstr ""
+
+msgctxt "selection:cooperative.partner.recibo,state:"
+msgid "Projected"
+msgstr "Proyectado"
+
+msgctxt "selection:cooperative.partner.recibo.lote,state:"
+msgid "Projected"
+msgstr "Proyectado"
+
+msgctxt "selection:purchase.purchase,state:"
+msgid "Projected"
+msgstr "Proyectada"
+
+msgctxt "selection:sale.sale,state:"
+msgid "Projected"
+msgstr "Proyectada"
+
+msgctxt "wizard_button:cooperative.lote.update_projection,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:cooperative.lote.update_projection,start,update:"
+msgid "Update"
+msgstr "Actualizar"
+
+msgctxt "wizard_button:cooperative_ar.print_cashflow,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:cooperative_ar.print_cashflow,start,print_:"
+msgid "Print"
+msgstr "Imprimir"
+
+msgctxt "wizard_button:purchase.update_projection,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:purchase.update_projection,start,update:"
+msgid "Update"
+msgstr "Actualizar"
+
+msgctxt "wizard_button:sale.update_projection,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:sale.update_projection,start,update:"
+msgid "Update"
+msgstr "Actualizar"

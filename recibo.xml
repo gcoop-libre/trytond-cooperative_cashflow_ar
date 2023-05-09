@@ -1,0 +1,77 @@
+<tryton>
+    <data>
+
+<!-- Recibos de asociado -->
+
+        <record model="ir.ui.view" id="recibo_view_form">
+            <field name="model">cooperative.partner.recibo</field>
+            <field name="inherit" ref="cooperative_ar.recibo_view_form"/>
+            <field name="name">recibo_form</field>
+        </record>
+
+        <record model="ir.action.act_window.domain"
+            id="act_recibo_form_domain_projected">
+            <field name="name">Projected</field>
+            <field name="sequence" eval="15"/>
+            <field name="domain"
+                eval="[('state', '=', 'projected')]"
+                pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="cooperative_ar.act_recibo_form"/>
+        </record>
+
+        <record model="ir.model.button" id="recibo_project_button">
+            <field name="name">project</field>
+            <field name="string">Project</field>
+            <field name="model"
+                search="[('model', '=', 'cooperative.partner.recibo')]"/>
+        </record>
+
+<!-- Lotes -->
+
+        <record model="ir.ui.view" id="recibo_lote_view_form">
+            <field name="model">cooperative.partner.recibo.lote</field>
+            <field name="inherit" ref="cooperative_ar.recibo_lote_view_form"/>
+            <field name="name">recibo_lote_form</field>
+        </record>
+
+        <record model="ir.action.act_window.domain"
+            id="act_recibo_lote_form_domain_projected">
+            <field name="name">Projected</field>
+            <field name="sequence" eval="15"/>
+            <field name="domain"
+                eval="[('state', '=', 'projected')]"
+                pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="cooperative_ar.act_recibo_lote_form"/>
+        </record>
+
+        <record model="ir.model.button" id="recibo_lote_project_button">
+            <field name="name">project</field>
+            <field name="string">Project</field>
+            <field name="model"
+                search="[('model', '=', 'cooperative.partner.recibo.lote')]"/>
+        </record>
+
+<!-- Update Recibo Projection -->
+
+        <record model="ir.ui.view" id="lote_update_projection_start_view">
+            <field name="model">cooperative.lote.update_projection.start</field>
+            <field name="type">form</field>
+            <field name="name">lote_update_projection_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_lote_update_projection">
+            <field name="name">Update Recibo Projection</field>
+            <field name="wiz_name">cooperative.lote.update_projection</field>
+        </record>
+
+        <record model="ir.action.keyword"
+            id="wiz_lote_update_projection_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">cooperative.partner.recibo.lote,-1</field>
+            <field name="action" ref="wiz_lote_update_projection"/>
+        </record>
+
+    </data>
+</tryton>

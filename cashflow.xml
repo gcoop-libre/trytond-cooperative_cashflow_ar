@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Print Cash-Flow Report -->
+
+        <record model="ir.ui.view" id="print_cashflow_report_start_view">
+            <field name="model">cooperative_ar.print_cashflow.start</field>
+            <field name="type">form</field>
+            <field name="name">print_cashflow_report_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_print_cashflow_report">
+            <field name="name">Print Cash-Flow</field>
+            <field name="wiz_name">cooperative_ar.print_cashflow</field>
+        </record>
+
+        <menuitem action="wiz_print_cashflow_report"
+            id="menu_print_cashflow_report"
+            parent="account.menu_reporting" sequence="40"
+            icon="tryton-print"/>
+
+
+<!-- Cash-Flow Report -->
+
+        <record model="ir.action.report" id="report_cashflow">
+            <field name="name">Cash-Flow</field>
+            <field name="report_name">cooperative_ar.cashflow</field>
+            <field name="report">cooperative_cashflow_ar/cashflow.fods</field>
+            <field name="template_extension">ods</field>
+        </record>
+
+
+    </data>
+</tryton>
