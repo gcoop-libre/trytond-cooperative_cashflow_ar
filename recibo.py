@@ -88,17 +88,9 @@ class UpdateReciboLoteProjectionStart(ModelView):
     'Update Recibo Projection'
     __name__ = 'cooperative.lote.update_projection.start'
 
-    from_date = fields.Date('From Date', required=True,
-        help='Date from which the amounts will be updated')
     formula = fields.Char('Unit Price Formula', required=True,
         help=('Python expression that will be evaluated with:\n'
             '- amount: the current amount of each receipt'))
-
-    @classmethod
-    def default_from_date(cls):
-        pool = Pool()
-        Date = pool.get('ir.date')
-        return Date.today()
 
     @classmethod
     def default_formula(cls):
@@ -154,9 +146,6 @@ class UpdateReciboLoteProjection(Wizard):
             recibos = []
             for recibo in lote.recibos:
                 if recibo.state != 'projected':
-                    continue
-                if (not recibo.date or
-                        self.start.from_date > recibo.date):
                     continue
                 amount = self.get_amount(recibo.amount).quantize(
                     Decimal(1) / 10 ** 2)
