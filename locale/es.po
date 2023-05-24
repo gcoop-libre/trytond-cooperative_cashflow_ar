@@ -10,10 +10,6 @@ msgctxt "field:cooperative.lote.update_projection.start,formula:"
 msgid "Unit Price Formula"
 msgstr "Fórmula de Precio"
 
-msgctxt "field:cooperative.lote.update_projection.start,from_date:"
-msgid "From Date"
-msgstr "Desde la fecha"
-
 msgctxt "field:cooperative_ar.print_cashflow.start,analytic_account:"
 msgid "Analytic Account"
 msgstr "Cuenta analítica"
@@ -53,10 +49,6 @@ msgid ""
 msgstr ""
 "Expresión de Python que se evaluará como:\n"
 "- amount: El importe actual de cada recibo"
-
-msgctxt "help:cooperative.lote.update_projection.start,from_date:"
-msgid "Date from which the amounts will be updated"
-msgstr "Fecha a partir de la cual se actualizarán los importes"
 
 msgctxt "help:purchase.update_projection.start,formula:"
 msgid ""
