@@ -287,7 +287,7 @@ class CashFlowReport(Report):
                     'amount': Decimal(0),
                     }
             with Transaction().set_context(date=line.move.date):
-                records[key]['amount'] += abs(line.debit - line.credit)
+                records[key]['amount'] += line.debit - line.credit
 
         # first date of next month
         from_date_purchase = today.replace(day=1) + relativedelta(months=1)
