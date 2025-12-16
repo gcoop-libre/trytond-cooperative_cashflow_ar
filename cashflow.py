@@ -3,6 +3,7 @@
 # the full copyright notices and license terms.
 from decimal import Decimal
 from dateutil.relativedelta import relativedelta
+from datetime import date, timedelta
 
 from trytond.model import ModelView, fields
 from trytond.wizard import Wizard, StateView, StateReport, Button
@@ -200,14 +201,58 @@ class CashFlowReport(Report):
         return records
 
     @classmethod
-    def _get_purchase_records(cls):
-        return []
+    def _get_purchase_records(cls, company_id, analytic_account, from_date, to_date):
+        pool = Pool()
+        Company = pool.get('company.company')
+        Currency = pool.get('currency.currency')
+        PurchaseLine = pool.get('purchase.line')
+        AnalyticAccount = pool.get('analytic_account.account')
+
+        records = {}
+        company = Company(company_id)
+
+        clause = [
+            ('purchase.company', '=', company),
+            ('purchase.state', 'in',
+                ['projected', 'confirmed', 'processing', 'done']),
+            ('type', '=', 'line'),
+            ('purchase.purchase_date', '>=', from_date),
+            ('purchase.purchase_date', '<=', to_date),
+            ]
+        purchase_lines = PurchaseLine.search(clause,
+            order=[('purchase.purchase_date', 'ASC')])
+        if not purchase_lines:
+            return records
+
+        for line in purchase_lines:
+            year = line.purchase.purchase_date.year
+            month = line.purchase.purchase_date.month
+            category_id = None
+            for analytic_line in line.analytic_accounts:
+                if (analytic_line.root.id == analytic_account and
+                        analytic_line.account):
+                    category_id = analytic_line.account.id
+            key = (year, month, category_id)
+            if key not in records:
+                records[key] = {
+                    'year': year,
+                    'month': month,
+                    'category': (category_id and
+                        AnalyticAccount(category_id).name or ''),
+                    'amount': Decimal(0),
+                    }
+            with Transaction().set_context(date=line.purchase.purchase_date):
+                records[key]['amount'] += Currency.compute(
+                    company.currency, line.amount, line.currency)
+        return records
 
     @classmethod
     def _get_expense_records(cls, data):
         pool = Pool()
         MoveLine = pool.get('account.move.line')
         AnalyticAccount = pool.get('analytic_account.account')
+        Date = pool.get('ir.date')
+        today = Date.today()
 
         records = {}
 
@@ -216,7 +261,7 @@ class CashFlowReport(Report):
             ('account.cashflow_report', '=', True),
             ('move.state', '=', 'posted'),
             ('move.date', '>=', data['from_date']),
-            ('move.date', '<=', data['to_date']),
+            ('move.date', '<=', today),
             ]
         move_lines = MoveLine.search(clause,
             order=[('move.date', 'ASC')])
@@ -242,8 +287,15 @@ class CashFlowReport(Report):
                     'amount': Decimal(0),
                     }
             with Transaction().set_context(date=line.move.date):
-                records[key]['amount'] += abs(line.debit - line.credit)
-        return records
+                records[key]['amount'] += line.debit - line.credit
+
+        # first date of next month
+        from_date_purchase = today.replace(day=1) + relativedelta(months=1)
+        to_date_purchase = data['to_date']
+        purchase_records = cls._get_purchase_records(data['company'], data['analytic_account'],
+                from_date_purchase, to_date_purchase)
+
+        return records | purchase_records
 
     @classmethod
     def _get_expense_summary(cls, columns, expenses_raw):
