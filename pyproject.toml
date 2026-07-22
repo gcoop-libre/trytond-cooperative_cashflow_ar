@@ -1,0 +1,73 @@
+[build-system]
+requires = [
+    'hatchling >= 1',
+    'hatch-tryton',
+    'hatch-tryton-ar @ git+https://github.com/tryton-ar/hatch-tryton-ar.git'
+    ]
+build-backend = 'hatchling.build'
+
+[project]
+name = 'trytonar_cooperative_cashflow_ar'
+dynamic = ['version', 'dependencies', 'optional-dependencies', 'authors', 'readme']
+requires-python = '>=3.10'
+maintainers = [
+    {name = "tryton-ar", email = "info@tryton.org.ar"},
+    ]
+description = 'Tryton module for cooperative cash flow management'
+license = 'GPL-3.0-or-later'
+license-files = ['LICENSE', 'COPYRIGHT']
+keywords = ["tryton", "cooperative", "cashflow", "accounting"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Plugins",
+    "Framework :: Tryton",
+    "Topic :: Office/Business",
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    ]
+
+[project.entry-points.'trytond.modules']
+cooperative_cashflow_ar = 'trytond.modules.cooperative_cashflow_ar'
+
+[project.urls]
+homepage = "https://github.com/tryton-ar/cooperative_cashflow_ar"
+documentation = "https://docs.tryton.org/"
+changelog = "https://github.com/tryton-ar/cooperative_cashflow_ar/blob/master/CHANGELOG"
+forum = "https://www.tryton.org/forum"
+issues = "https://github.com/tryton-ar/cooperative_cashflow_ar/issues"
+funding = "https://www.tryton.org/donate"
+
+[tool.hatch.build]
+include = [
+    '**/tryton.cfg',
+    '**/*.py',
+    '**/*.xml',
+    'view/**/*.xml',
+    'locale/**/*.po',
+    '**/*.fodt',
+    '**/*.fods',
+    'icons/**/*.svg',
+    'tests/**/*.rst',
+    ]
+
+[tool.hatch.build.targets.wheel.sources]
+"" = "trytond/modules/cooperative_cashflow_ar"
+
+[tool.hatch.metadata.hooks.tryton]
+dependencies = []
+copyright = 'COPYRIGHT'
+readme = 'README.rst'
+
+[tool.hatch.metadata.hooks.tryton.prefixes]
+cooperative_ar = 'trytonar'
+sale_invoice_line_create_wizard = 'trytonar'
+sale = 'trytonar'
+analytic_sale = 'trytonar'
+
+[tool.hatch.metadata.hooks.tryton-ar]
+
+[tool.hatch.metadata.hooks.tryton.tryton-optional-dependencies]
+test = ['proteus']
+
+[tool.hatch.metadata]
+allow-direct-references = true
