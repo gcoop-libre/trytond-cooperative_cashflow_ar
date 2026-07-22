@@ -9,7 +9,7 @@ from trytond.pool import PoolMeta
 class Account(metaclass=PoolMeta):
     __name__ = 'account.account'
 
-    cashflow_report = fields.Boolean('Use in cashflow report', select=True)
+    cashflow_report = fields.Boolean('Use in cashflow report')
 
     @staticmethod
     def default_cashflow_report():

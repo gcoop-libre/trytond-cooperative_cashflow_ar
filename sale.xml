@@ -24,7 +24,7 @@
         <record model="ir.model.button" id="sale_project_button">
             <field name="name">project</field>
             <field name="string">Project</field>
-            <field name="model" search="[('model', '=', 'sale.sale')]"/>
+            <field name="model">sale.sale</field>
         </record>
         <record model="ir.model.button-res.group"
             id="sale_project_button_group_sale">

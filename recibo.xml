@@ -23,8 +23,7 @@
         <record model="ir.model.button" id="recibo_project_button">
             <field name="name">project</field>
             <field name="string">Project</field>
-            <field name="model"
-                search="[('model', '=', 'cooperative.partner.recibo')]"/>
+            <field name="model">cooperative.partner.recibo</field>
         </record>
 
 <!-- Lotes -->
@@ -49,8 +48,7 @@
         <record model="ir.model.button" id="recibo_lote_project_button">
             <field name="name">project</field>
             <field name="string">Project</field>
-            <field name="model"
-                search="[('model', '=', 'cooperative.partner.recibo.lote')]"/>
+            <field name="model">cooperative.partner.recibo.lote</field>
         </record>
 
 <!-- Update Recibo Projection -->
