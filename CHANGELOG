@@ -1,0 +1,9 @@
+Version 8.0.0 - 2026-07-22
+* Migrate to Tryton 8.0 with hatch-tryton-ar build system
+
+Version 6.1.0 - 2024-01-15
+* Expenses proyectadas con compras (PR #2)
+* Actualización de proyección de recibos
+
+Version 6.0.0 - 2021-10-08
+* Initial release
