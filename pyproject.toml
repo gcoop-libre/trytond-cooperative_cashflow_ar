@@ -60,9 +60,6 @@ readme = 'README.rst'
 
 [tool.hatch.metadata.hooks.tryton.prefixes]
 cooperative_ar = 'trytonar'
-sale_invoice_line_create_wizard = 'trytonar'
-sale = 'trytonar'
-analytic_sale = 'trytonar'
 
 [tool.hatch.metadata.hooks.tryton-ar]
 
