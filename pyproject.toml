@@ -60,11 +60,13 @@ readme = 'README.rst'
 
 [tool.hatch.metadata.hooks.tryton.prefixes]
 cooperative_ar = 'trytonar'
+sale_invoice_line_create_wizard = 'trytonar'
 
 [tool.hatch.metadata.hooks.tryton-ar]
 
 [tool.hatch.metadata.hooks.tryton-ar.external-repos]
 cooperative_ar = 'gcoop-libre/trytond-cooperative_ar'
+sale_invoice_line_create_wizard = 'gcoop-libre/trytond-sale_invoice_line_create_wizard'
 
 [tool.hatch.metadata.hooks.tryton.tryton-optional-dependencies]
 test = ['proteus']
